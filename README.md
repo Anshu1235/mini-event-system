@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mini Event Management System
 
 ## Features
@@ -38,3 +39,6 @@ npm run dev
 - POST /bookings
 - GET /users/:id/bookings
 - POST /events/:id/attendance
+=======
+# mini-event-system
+>>>>>>> 39d60eaa1cb72668d29004d891bf6ad21832951f

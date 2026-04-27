@@ -19,28 +19,60 @@ function CreateEvent() {
         ...form,
         capacity: Number(form.capacity),
       });
-      alert("✅ Event Created!");
+      alert("Event created successfully");
     } catch (err) {
-        console.log(err.response);
-        alert(err.response?.data?.error || "Error creating event");
-      }
+      console.log(err.response);
+      alert(err.response?.data?.error || "Error creating event");
+    }
   };
 
   return (
     <div className="container">
-      <h2>Create Event</h2>
+      <section className="page-header compact">
+        <div>
+          <p className="eyebrow">Organizer tools</p>
+          <h1>Create Event</h1>
+          <p className="page-subtitle">
+            Add the details guests need before opening bookings.
+          </p>
+        </div>
+      </section>
 
-      <div className="card">
-        <input name="title" placeholder="Title" onChange={handleChange} />
-        <input name="description" placeholder="Description" onChange={handleChange} />
-        <input 
-          type="datetime-local" 
-          name="date" 
-          onChange={handleChange} 
-        />
-        <input name="capacity" placeholder="Capacity" onChange={handleChange} />
+      <div className="card form-card">
+        <label>
+          <span>Title</span>
+          <input name="title" placeholder="Product meetup" onChange={handleChange} />
+        </label>
+        <label>
+          <span>Description</span>
+          <input
+            name="description"
+            placeholder="A short summary for attendees"
+            onChange={handleChange}
+          />
+        </label>
+        <div className="form-row">
+          <label>
+            <span>Date and time</span>
+            <input
+              type="datetime-local"
+              name="date"
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            <span>Capacity</span>
+            <input
+              name="capacity"
+              type="number"
+              min="1"
+              placeholder="50"
+              onChange={handleChange}
+            />
+          </label>
+        </div>
 
-        <button onClick={handleSubmit}>Create Event 🚀</button>
+        <button onClick={handleSubmit}>Create Event</button>
       </div>
     </div>
   );

@@ -11,13 +11,13 @@ function App() {
     <Router>
       <Navbar />
 
-      <div style={{ padding: 20 }}>
+      <main className="app-shell">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/bookings" element={<MyBookings />} />
           <Route path="/create" element={<CreateEvent />} />
         </Routes>
-      </div>
+      </main>
     </Router>
   );
 }

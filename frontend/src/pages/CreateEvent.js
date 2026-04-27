@@ -28,7 +28,7 @@ function CreateEvent() {
 
   return (
     <div className="container">
-      <h2>➕ Create Event</h2>
+      <h2>Create Event</h2>
 
       <div className="card">
         <input name="title" placeholder="Title" onChange={handleChange} />

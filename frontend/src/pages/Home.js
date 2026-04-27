@@ -36,7 +36,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h2>🎉 Explore Events</h2>
+      <h2>Explore Events</h2>
 
       {/* 🔥 DEBUG */}
       <p>Total Events: {events.length}</p>
